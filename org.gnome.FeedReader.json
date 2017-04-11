@@ -108,6 +108,10 @@
           "url": "https://github.com/jangernert/FeedReader.git",
           "branch": "v2.0.2",
           "commit": "c65573befe9faed5bed92359ceaa2cdf033e4e13"
+        },
+        {
+          "type": "patch",
+          "path": "fix-vala.patch"
         }
       ]
     }

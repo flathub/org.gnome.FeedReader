@@ -1,0 +1,33 @@
+From eb2dc5a27e9d5883b726fb767daba994bae6662c Mon Sep 17 00:00:00 2001
+From: Bilal Elmoussaoui <bil.elmoussaoui@gmail.com>
+Date: Mon, 27 Feb 2017 14:44:46 +0100
+Subject: [PATCH] Fixes #410
+
+---
+ Constants.vala.in | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/Constants.vala.in b/Constants.vala.in
+index 94cf767..7510f3f 100644
+--- a/Constants.vala.in
++++ b/Constants.vala.in
+@@ -43,11 +43,11 @@ namespace FeedReader {
+ 	}
+ 
+ 	public class MediaButton : GLib.Object {
+-		public const string PLAY = N_("Play");
+-		public const string PAUSE = N_("Pause");
+-		public const string MUTE = N_("Mute");
+-		public const string UNMUTE = N_("Unmute");
+-		public const string CLOSE = N_("Close");
++		public const string PLAY = "Play";
++		public const string PAUSE = "Pause";
++		public const string MUTE = "Mute";
++		public const string UNMUTE = "Unmute";
++		public const string CLOSE = "Close";
+ 	}
+ 
+ 	public class Constants : GLib.Object {
+-- 
+2.9.3
+
