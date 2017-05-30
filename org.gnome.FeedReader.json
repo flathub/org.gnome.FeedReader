@@ -94,8 +94,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/gnome-online-accounts/3.22/gnome-online-accounts-3.22.3.tar.xz",
-          "sha256": "0bef86988f38e4b1a46c778ad160c4470c2197d75a4267966d5a5938a0b39b8f"
+          "url": "https://download.gnome.org/sources/gnome-online-accounts/3.24/gnome-online-accounts-3.24.1.tar.xz",
+          "sha256": "0a30ab4e4e8015fae707c3b38f05163299743725a36136076fce993c2b8ef651"
         }
       ]
     },
@@ -108,6 +108,10 @@
           "url": "https://github.com/jangernert/FeedReader.git",
           "branch": "v2.0.2",
           "commit": "c65573befe9faed5bed92359ceaa2cdf033e4e13"
+        },
+        {
+          "type": "patch",
+          "path": "001-patch-2-current-stable-branch.patch"
         },
         {
           "type": "patch",
