@@ -73,8 +73,9 @@
 			"buildsystem": "meson",
 			"config-opts": ["--buildtype=release"],
 			"sources": [{
-				"type": "git",
-				"url": "https://github.com/jangernert/FeedReader.git"
+				"type": "archive",
+				"url": "https://github.com/jangernert/FeedReader/archive/v2.2.tar.gz",
+				"sha256": "621b0fc544e37101b5a0486618144e83e4fd961020a3f67e80703c18a47d704f"
 			}]
 		}
 	]
