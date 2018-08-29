@@ -69,13 +69,21 @@
 			}]
 		},
 		{
+			"name": "gumbo",
+			"sources": [{
+				"type": "archive",
+				"url": "https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz",
+				"sha256": "28463053d44a5dfbc4b77bcf49c8cee119338ffa636cc17fc3378421d714efad"
+			}]
+		},
+		{
 			"name": "feedreader",
 			"buildsystem": "meson",
 			"config-opts": ["--buildtype=release"],
 			"sources": [{
 				"type": "archive",
-				"url": "https://github.com/jangernert/FeedReader/archive/2.2.1.tar.gz",
-				"sha256": "4dca0fe4622cebeb7cc7d3138d404e2b35877036da7588dd6867ac90a5763cf7"
+				"url": "https://github.com/jangernert/FeedReader/archive/v2.3.0.tar.gz",
+				"sha256": "36b6aaf859d64405a12ab552ceaf524eb78c74368e48ad7b197c433c7fe3a57e"
 			}]
 		}
 	]
