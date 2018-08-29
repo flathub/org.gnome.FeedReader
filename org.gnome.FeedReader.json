@@ -83,7 +83,7 @@
 			"sources": [{
 				"type": "archive",
 				"url": "https://github.com/jangernert/FeedReader/archive/v2.3.0.tar.gz",
-				"sha256": "36b6aaf859d64405a12ab552ceaf524eb78c74368e48ad7b197c433c7fe3a57e"
+				"sha256": "afb549b67ce35d51c2a1bd3bddec3cc9f22a8339f92eff860aee27302017146e"
 			}]
 		}
 	]
