@@ -24,18 +24,11 @@
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets"
   ],
-  "build-options": {
-    "cflags": "-O2 -g -w",
-    "cxxflags": "-O2 -g",
-    "env": {
-      "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
-      "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
-    }
-  },
   "modules": [{
       "name": "libgee",
       "cleanup": ["/include", "*.la", "/lib/pkgconfig", "/share"],
       "config-opts": ["--enable-introspection=no", "--enable-vala"],
+      "make-install-args": ["girdir=/app/share/gir-1.0", "typelibdir=/app/lib/girepository-1.0"],
       "sources": [{
         "type": "archive",
         "url": "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.1.tar.xz",
