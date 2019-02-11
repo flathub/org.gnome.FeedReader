@@ -79,8 +79,8 @@
       "config-opts": ["--buildtype=release"],
       "sources": [{
         "type": "archive",
-        "url": "https://github.com/jangernert/FeedReader/archive/v2.8.1.tar.gz",
-        "sha256": "a77acd6f77f4fa5b35671b9945806dd7b36949c006295be6bdef7f921c7df3c0"
+        "url": "https://github.com/jangernert/FeedReader/archive/v2.8.2.tar.gz",
+        "sha256": "40ec53a5bdb745909b486092fb0c91686b2f1a76fce5416514f62c3f3617f612"
       }]
     }
   ]
