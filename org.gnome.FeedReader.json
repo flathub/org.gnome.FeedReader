@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.FeedReader",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.32",
+  "runtime-version": "3.34",
   "sdk": "org.gnome.Sdk",
   "command": "feedreader",
   "finish-args": [
@@ -16,16 +16,15 @@
     "--device=dri",
     /* Access to Network */
     "--share=network",
-    /* Needed for dconf to work */
-    "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-    "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
     "--talk-name=org.gnome.OnlineAccounts",
     "--own-name=org.gnome.FeedReader.ArticleView",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets",
     /* Access to DecSync directory */
     "--env=DECSYNC_DIR=.local/share/decsync",
-    "--filesystem=~/.local/share/decsync"
+    "--filesystem=~/.local/share/decsync",
+    /* Migrate dconf settings */
+    "--metadata=X-DConf=migrate-path=/org/gnome/feedreader/"
   ],
   "modules": [{
       "name": "rest",
@@ -38,12 +37,20 @@
       }]
     }, {
       "name": "libpeas",
-      "config-opts": ["--disable-gtk-doc", "--disable-gtk-doc-html", "--disable-gtk"],
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dlua51=false",
+        "-Dpython2=false",
+        "-Dpython3=false",
+        "-Dwidgetry=false",
+        "-Dglade_catalog=false",
+        "-Ddemos=false"
+      ],
       "cleanup": ["/include", "*.la", "/lib/pkgconfig"],
       "sources": [{
         "type": "archive",
-        "url": "https://download.gnome.org/sources/libpeas/1.22/libpeas-1.22.0.tar.xz",
-        "sha256": "5b2fc0f53962b25bca131a5ec0139e6fef8e254481b6e777975f7a1d2702a962"
+        "url": "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.0.tar.xz",
+        "sha256": "0b9a00138c129a663de3eef5569b00ace03ce31d345f7af783768e9f35c8e6f9"
       }]
     },
     {
@@ -51,8 +58,8 @@
       "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
       "sources": [{
         "type": "archive",
-        "url": "https://download.gnome.org/sources/gnome-online-accounts/3.32/gnome-online-accounts-3.32.0.tar.xz",
-        "sha256": "1c19e65771c8d16fa0016ab70d9a1ee2b75a84aeeedd24527a4e41b132e8d4aa"
+        "url": "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.0.tar.xz",
+        "sha256": "c44fbce4eeb54703a2ab4954d54f11eb29666f9cf61b5275b9fe0fc033377f57"
       }]
     },
     {
@@ -71,6 +78,9 @@
         "type": "archive",
         "url": "https://github.com/jangernert/FeedReader/archive/v2.10.0.tar.gz",
         "sha256": "fd10d2d2dc9c20c259d672634e5e100d10f0fb730e0687e1b3c2423224901a2c"
+      },{
+        "type": "patch",
+        "path": "feedreader_build.patch"
       }]
     }
   ]
