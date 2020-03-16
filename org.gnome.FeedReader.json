@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.FeedReader",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.34",
+  "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "command": "feedreader",
   "finish-args": [
@@ -20,6 +20,8 @@
     "--own-name=org.gnome.FeedReader.ArticleView",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets",
+    "--talk-name=org.gtk.vfs",
+    "--talk-name=org.gtk.vfs.*",
     /* Access to DecSync directory */
     "--env=DECSYNC_DIR=.local/share/decsync",
     "--filesystem=~/.local/share/decsync",
@@ -58,8 +60,8 @@
       "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
       "sources": [{
         "type": "archive",
-        "url": "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.0.tar.xz",
-        "sha256": "c44fbce4eeb54703a2ab4954d54f11eb29666f9cf61b5275b9fe0fc033377f57"
+        "url": "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
+        "sha256": "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e"
       }]
     },
     {
