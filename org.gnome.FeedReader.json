@@ -26,7 +26,8 @@
     "--env=DECSYNC_DIR=.local/share/decsync",
     "--filesystem=~/.local/share/decsync",
     /* Migrate dconf settings */
-    "--metadata=X-DConf=migrate-path=/org/gnome/feedreader/"
+    "--metadata=X-DConf=migrate-path=/org/gnome/feedreader/",
+    "--end-of-life=No longer maintained! Check out NewsFlash."
   ],
   "modules": [{
       "name": "rest",
@@ -78,8 +79,8 @@
       "config-opts": ["--buildtype=release"],
       "sources": [{
         "type": "archive",
-        "url": "https://github.com/jangernert/FeedReader/archive/v2.10.0.tar.gz",
-        "sha256": "fd10d2d2dc9c20c259d672634e5e100d10f0fb730e0687e1b3c2423224901a2c"
+        "url": "https://github.com/jangernert/FeedReader/archive/v2.11.0.tar.gz",
+        "sha256": "9f679cc08e5673e9e90541b0a0c4066990deacddfe2692f6611799d99bdf5b3e"
       },{
         "type": "patch",
         "path": "feedreader_build.patch"
