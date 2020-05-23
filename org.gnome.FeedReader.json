@@ -26,8 +26,7 @@
     "--env=DECSYNC_DIR=.local/share/decsync",
     "--filesystem=~/.local/share/decsync",
     /* Migrate dconf settings */
-    "--metadata=X-DConf=migrate-path=/org/gnome/feedreader/",
-    "--end-of-life=No longer maintained! Check out NewsFlash."
+    "--metadata=X-DConf=migrate-path=/org/gnome/feedreader/"
   ],
   "modules": [{
       "name": "rest",
